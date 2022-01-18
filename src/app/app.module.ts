@@ -4,6 +4,8 @@ import { AppRountingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRountingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

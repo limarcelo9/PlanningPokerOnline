@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  height: 100%;
+  background-color: #cfd8dc;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  width: 25rem;
+  height: 20rem;
+}
+
+.form-field-input {
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 2.5rem;
+}
