@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
-import { HomeRoutingModule } from './home-routing.module';
+import { LoginComponent } from './login.component';
+import { LoginRoutingModule } from './login-routing.module';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
@@ -10,11 +10,11 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule,
+    LoginRoutingModule,
     MatCardModule,
     MatInputModule,
     MatIconModule,
@@ -22,7 +22,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     DragDropModule
   ],
   exports: [
-    HomeComponent,
+    LoginComponent,
   ]
 })
-export class HomeModule { }
+export class LoginModule { }

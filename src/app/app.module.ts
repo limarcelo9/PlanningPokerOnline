@@ -5,11 +5,13 @@ import { AppRountingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@
 
   <div class="container-left">
 
-    <div class="container-form">
+    <form class="container-form" (ngSubmit)="onAuthenticate()">
       <span>Usuário</span>
       <input class="input-text" type="text" placeholder="digite seu usuário">
 
@@ -24,10 +24,7 @@
           <a href="">registre-se</a>
         </strong>
       </p>
-
-    </div>
-
-
+    </form>
 
   </div>
     <div class="container-right">
