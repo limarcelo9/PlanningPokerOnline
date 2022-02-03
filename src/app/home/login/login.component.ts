@@ -8,6 +8,10 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
+  public user='';
+  public password='';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,7 +19,7 @@ export class LoginComponent implements OnInit {
 
 
   onAuthenticate(){
-    window.alert("Authentication")
-    console.log("teste")
+    console.log(this.user);
+    console.log(this.password)
   }
 }

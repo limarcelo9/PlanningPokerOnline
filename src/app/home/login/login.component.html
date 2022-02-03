@@ -3,11 +3,25 @@
   <div class="container-left">
 
     <form class="container-form" (ngSubmit)="onAuthenticate()">
+
+
       <span>Usuário</span>
-      <input class="input-text" type="text" placeholder="digite seu usuário">
+      <input
+        [(ngModel)]="user"
+        name="user"
+        class="input-text"
+        type="text"
+        placeholder="digite seu usuário"
+      >
 
       <span>Senha</span>
-      <input class="input-text" type="password" placeholder="digite sua senha">
+      <input
+        class="input-text"
+        type="password"
+        placeholder="digite sua senha"
+        name="password"
+        [(ngModel)]="password"
+      />
 
       <div class="support">
         <div class="remamber">
@@ -17,7 +31,7 @@
         <a href="">Esqueci minha senha</a>
       </div>
 
-      <button type="button">ENTRAR</button>
+      <button  type="submit">ENTRAR</button>
 
       <p>ainda não tem uma conta?
         <strong>

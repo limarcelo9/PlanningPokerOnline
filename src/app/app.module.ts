@@ -1,3 +1,4 @@
+import { SignUpRoutingModule } from './sign-up/sign-up-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRountingModule } from './app-routing.module';
@@ -5,20 +6,20 @@ import { AppRountingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { HomeModule } from './home/home.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignUpComponent
   ],
   imports: [
     BrowserModule,
     AppRountingModule,
     HttpClientModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
