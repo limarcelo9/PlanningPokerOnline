@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
 
 @Component({
   selector: 'app-login',
@@ -12,14 +13,18 @@ export class LoginComponent implements OnInit {
   public user='';
   public password='';
 
-  constructor() { }
+  constructor(private authService: AutenticacaoService) { }
 
   ngOnInit(): void {
   }
 
 
   onAuthenticate(){
-    console.log(this.user);
-    console.log(this.password)
+    this.authService.authenticate(this.user, this.password).subscribe(() => {
+      window.alert('Autenticado com sucesso!')
+    }, (error) => {
+      window.alert('Usuario ou senha inválido')
+      console.log(error)
+    });
   }
 }
