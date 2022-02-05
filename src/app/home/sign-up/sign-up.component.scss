@@ -87,18 +87,16 @@ a {
     margin: 0 auto;
     padding: 12px 0;
   }
-
-  .support {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #FFC632;
-  }
-
-  .remamber {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+.support {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFC632;
+}
+.remamber {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 
   input {
     width: 18px
@@ -108,15 +106,17 @@ a {
     font-size: 15px;
     color: gray;
   }
- }
+}
+
 }
 
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
-  0% {transform: translateY(-100px);}
-  100% {transform: translateY(0);}
+  0% {transform: translateX(-100px);}
+  100% {transform: translateX(0px);}
 }
+
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
@@ -142,7 +142,7 @@ a {
   to   { opacity: 1; }
 }
 
-.fadeIn {
+.fadeIn2 {
   animation: fadein 1s;
   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 1s; /* Firefox < 16 */
@@ -150,5 +150,4 @@ a {
   -o-animation: fadein 1s; /* Opera < 12.1 */
   animation: fadein 1s;
 }
-
 

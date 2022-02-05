@@ -1,6 +1,5 @@
 
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
 
 @Component({

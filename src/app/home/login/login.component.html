@@ -1,9 +1,8 @@
 <div class="container">
 
-  <div class="container-left">
+  <div class="container-left ">
 
-    <form class="container-form" (ngSubmit)="onAuthenticate()">
-
+    <form class="container-form fadeIn " (ngSubmit)="onAuthenticate()">
 
       <span>Usuário</span>
       <input
@@ -35,7 +34,7 @@
 
       <p>ainda não tem uma conta?
         <strong>
-          <a href="">registre-se</a>
+          <a [routerLink]="['sign-up']">registre-se</a>
         </strong>
       </p>
     </form>
