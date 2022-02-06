@@ -7,6 +7,7 @@ import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss']
 })
+
 export class SignUpComponent implements OnInit {
 
   public user = '';

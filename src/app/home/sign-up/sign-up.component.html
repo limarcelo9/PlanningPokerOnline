@@ -1,23 +1,23 @@
 <section class="container">
   <div class="signup-container">
     <p class="signup-title">Criar sua conta</p>
-    <form class="signup-form">
+    <form class="signup-form" (ngSubmit)="onCreate()">
       <ul class="signup-list">
         <li class="signup-list-item">
           <span class="label-item">Usuario</span>
-          <input class="signup-input" type="text">
+          <input name="user" [(ngModel)]="user" class="signup-input" type="text">
         </li>
         <li class="signup-list-item">
           <span class="label-item">Senha</span>
-          <input class="signup-input" type="password">
+          <input name="password" [(ngModel)]="password" class="signup-input" type="password">
         </li>
         <li class="signup-list-item">
           <span class="label-item">Confirmar senha</span>
-          <input class="signup-input" type="password">
+          <input [(ngModel)]="passwordConfirmation" class="signup-input" type="password">
         </li>
       </ul>
       <button type="submit" class="submit-btn">Criar conta</button>
-      <span class="label-alternative">Ja possui conta? <a  [routerLink]="['']"> Acesse</a></span>
+      <span class="label-alternative">Ja possui conta? <a [routerLink]="['']"> Acesse</a></span>
     </form>
   </div>
 </section>
