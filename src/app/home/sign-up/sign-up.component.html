@@ -11,9 +11,13 @@
           <span class="label-item">Senha</span>
           <input class="signup-input" type="password">
         </li>
+        <li class="signup-list-item">
+          <span class="label-item">Confirmar senha</span>
+          <input class="signup-input" type="password">
+        </li>
       </ul>
-      <button type="submit">Criar conta</button>
-      <span>Ja possui conta? <a href="#">Acesse</a></span>
+      <button type="submit" class="submit-btn">Criar conta</button>
+      <span class="label-alternative">Ja possui conta? <a  [routerLink]="['']"> Acesse</a></span>
     </form>
   </div>
 </section>
