@@ -1,50 +1,19 @@
-<div class="container">
-
-  <div class="container-right">
-    <img src="../../assets/images/side-image.jpg" alt="">
-  </div>
-
-  <div class="container-left">
-
-    <form class="container-form fadeIn2" (ngSubmit)="onCreate()">
-
-      <span>usuário</span>
-      <input
-        [(ngModel)]="user"
-        name="user"
-        class="input-text"
-        type="text"
-        placeholder="digite o nome de usuário"
-      >
-
-      <span>senha</span>
-      <input
-        class="input-text"
-        type="password"
-        placeholder="digite sua senha"
-        name="password"
-        [(ngModel)]="password"
-      />
-
-      <span>confirmar senha</span>
-      <input
-        class="input-text"
-        type="password"
-        placeholder="confirme sua senha"
-        name="password"
-        [(ngModel)]="passwordConfirmation"
-      />
-
-      <button  type="submit">CADASTRAR</button>
-
-      <p>já tem uma conta?
-        <strong>
-          <a [routerLink]="['']">faça o login</a>
-        </strong>
-      </p>
+<section class="container">
+  <div class="signup-container">
+    <p class="signup-title">Criar sua conta</p>
+    <form class="signup-form">
+      <ul class="signup-list">
+        <li class="signup-list-item">
+          <span class="label-item">Usuario</span>
+          <input class="signup-input" type="text">
+        </li>
+        <li class="signup-list-item">
+          <span class="label-item">Senha</span>
+          <input class="signup-input" type="password">
+        </li>
+      </ul>
+      <button type="submit">Criar conta</button>
+      <span>Ja possui conta? <a href="#">Acesse</a></span>
     </form>
-
-
   </div>
-
-</div>
+</section>
