@@ -4,7 +4,6 @@ import { SignUpRoutingModule } from './sign-up-routing.module';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up.component';
 
-
 @NgModule({
   declarations: [
     SignUpComponent,
