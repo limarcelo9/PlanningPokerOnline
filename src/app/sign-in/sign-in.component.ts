@@ -7,7 +7,7 @@ import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class SignInComponent implements OnInit {
 
   public user='';
   public password='';
