@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SignUpRoutingModule } from './sign-up-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up.component';
+import { ModalModule } from '../modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { SignUpComponent } from './sign-up.component';
     CommonModule,
     SignUpRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    ModalModule
+  ],
 })
 export class SignUpModule { }
