@@ -43,4 +43,12 @@ export class SignUpComponent implements OnInit {
       console.log(error)
     })
   }
+
+  onPrimaryAction() {
+
+  }
+
+  onSecondAction() {
+
+  }
 }

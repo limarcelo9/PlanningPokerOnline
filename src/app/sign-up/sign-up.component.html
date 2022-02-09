@@ -16,10 +16,14 @@
           <input class="signup-input" type="password">
         </li>
       </ul>
-      <button type="submit" class="submit-btn">Criar conta</button>
+      <button type="submit" (click)="modal.toggle()" class="submit-btn">Criar conta</button>
       <span class="label-alternative">Ja possui conta? <a [routerLink]="['/sign-in']"> Acesse</a></span>
     </form>
   </div>
 
-  <app-modal></app-modal>
+  <app-modal #modal>
+
+    <h1>Lorem, ipsum dolor.</h1>
+
+  </app-modal>
 </section>

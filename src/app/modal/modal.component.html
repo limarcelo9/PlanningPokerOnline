@@ -1,4 +1,8 @@
-<div class="modal">
-  Usuário ou senha inválidos
-</div>
-<div class="overlay"></div>
+
+<ng-container *ngIf="show">
+  <div (click)="toggle();" class="modal">
+      <ng-content ></ng-content>
+  </div>
+  <div (click)="toggle()"
+       class="overlay"></div>
+</ng-container>
