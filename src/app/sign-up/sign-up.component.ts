@@ -27,8 +27,8 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {
     this.signUpForm = this.formBuilder.group({
-      userName: [''],
-      password: [''],
+      userName: [''] ,
+      password: [''] ,
     })
   }
 
