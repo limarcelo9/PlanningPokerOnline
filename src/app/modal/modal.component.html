@@ -1,8 +1,7 @@
 
 <ng-container *ngIf="show">
-  <div (click)="toggle();" class="modal">
+  <div (click)="toggle();" class="modal {{fade}}">
       <ng-content ></ng-content>
   </div>
-  <div (click)="toggle()"
-       class="overlay"></div>
+
 </ng-container>

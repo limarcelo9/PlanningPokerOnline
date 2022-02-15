@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
+  fade = '';
 
   constructor() { }
 
@@ -14,8 +15,14 @@ export class ModalComponent implements OnInit {
 
   show: boolean = false;
 
-  toggle () {
+  public async toggle () {
+    this.fade = 'fadeIn'
     this.show = !this.show;
+    await new Promise(f => setTimeout(f, 4200));
+    this.fade = 'fadeOut'
+    await new Promise(f => setTimeout(f, 700));
+    this.show = !this.show;
+
   }
 
 }

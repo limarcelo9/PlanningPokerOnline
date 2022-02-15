@@ -1,7 +1,7 @@
 <section class="container">
   <div class="signup-container">
     <p class="signup-title">Criar sua conta</p>
-    <form class="signup-form" [formGroup]="signUpForm" (ngSubmit)="onCreate()">
+    <form class="signup-form" [formGroup]="signUpForm" (ngSubmit)="onCreate(modal)">
       <ul class="signup-list">
         <li class="signup-list-item">
           <span class="label-item">Usuario</span>
@@ -16,14 +16,14 @@
           <input class="signup-input" type="password">
         </li>
       </ul>
-      <button type="submit" (click)="modal.toggle()" class="submit-btn">Criar conta</button>
+      <button type="submit" class="submit-btn">Criar conta</button>
       <span class="label-alternative">Ja possui conta? <a [routerLink]="['/sign-in']"> Acesse</a></span>
     </form>
   </div>
 
   <app-modal #modal>
 
-    <h1>Lorem, ipsum dolor.</h1>
+    <h1>{{message}}</h1>
 
   </app-modal>
 </section>
