@@ -4,6 +4,7 @@ import { SignUpRoutingModule } from './sign-up-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up.component';
 import { ModalModule } from '../modal/modal.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ModalModule } from '../modal/modal.module';
     SignUpRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    ModalModule
+    ModalModule,
+    MatProgressSpinnerModule,
   ],
 })
 export class SignUpModule { }

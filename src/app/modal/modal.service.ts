@@ -11,9 +11,9 @@ export class ModalService {
 
   async toogle(){
     this.show = !this.show;
-    console.log("antes do delay")
+
     await this.delay(5000);
-    console.log("depois do delay")
+
     this.show = !this.show;
   }
 

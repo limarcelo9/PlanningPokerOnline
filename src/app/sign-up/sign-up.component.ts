@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
+import { SpinnerService } from '../core/spinner/spinner/spinner.service';
 import { ModalComponent } from '../modal/modal.component';
 import { SignUp } from './service/sign-up';
 import { SignUpService } from './service/sign-up.service';
@@ -25,7 +26,8 @@ export class SignUpComponent implements OnInit {
   constructor(
     private signUpService: SignUpService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private spinnerService: SpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -38,14 +40,16 @@ export class SignUpComponent implements OnInit {
   onCreate(modal: ModalComponent){
     debugger
     const newUser = this.signUpForm.getRawValue() as SignUp
-    console.log(newUser)
+    this.spinnerService.requestStarted();
     this.signUpService.createUser(newUser).subscribe(() => {
       this.message = 'Cadastro realizado  com sucesso!'
+      this.spinnerService.requestEnded();
       this.router.navigate(['']);
       modal.toggle()
     }, (error) => {
       this.message = 'Falha ao realizar cadastro.'
       console.log(error)
+      this.spinnerService.resetSpinner();
       modal.toggle()
     })
 
