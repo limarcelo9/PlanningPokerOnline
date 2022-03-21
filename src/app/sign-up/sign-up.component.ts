@@ -45,7 +45,7 @@ export class SignUpComponent implements OnInit {
       this.message = 'Cadastro realizado  com sucesso!'
       this.spinnerService.requestEnded();
       await modal.toggle()
-      this.router.navigate(['/sign-in']);
+      this.router.navigate(['/dashboard']);
     }, (error) => {
       this.message = 'Falha ao realizar cadastro.'
       console.log(error)
