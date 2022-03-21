@@ -41,11 +41,11 @@ export class SignUpComponent implements OnInit {
     debugger
     const newUser = this.signUpForm.getRawValue() as SignUp
     this.spinnerService.requestStarted();
-    this.signUpService.createUser(newUser).subscribe(() => {
+    this.signUpService.createUser(newUser).subscribe(async () => {
       this.message = 'Cadastro realizado  com sucesso!'
       this.spinnerService.requestEnded();
-      this.router.navigate(['']);
-      modal.toggle()
+      await modal.toggle()
+      this.router.navigate(['/sign-in']);
     }, (error) => {
       this.message = 'Falha ao realizar cadastro.'
       console.log(error)
